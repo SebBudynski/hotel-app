@@ -25,9 +25,9 @@ export class ReservationService {
     localStorage.setItem('reservations', JSON.stringify(this.reservations));
   }
 
-  delateReservation(id: string): void {
+  deleteReservation(id: string): void {
     let index = this.reservations.findIndex((res) => res.id === id);
-    this.reservations.splice;
+    this.reservations.splice(index, 1);
     localStorage.setItem('reservations', JSON.stringify(this.reservations));
   }
 
